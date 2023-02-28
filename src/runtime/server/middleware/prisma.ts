@@ -11,17 +11,6 @@ const roleRegExp = /^\w+$/;
 /** Singleton prisma client. */
 let prisma: PrismaClient;
 
-// /**
-//  * Prisma type declaration for event context.
-//  * Add `prisma` attribute to the `event.context` type to
-//  * `const prisma = event.context.prisma;`
-//  */
-// declare module "h3" {
-//   interface H3EventContext {
-//     prisma: PrismaClient;
-//   }
-// }
-
 /**
  * Decodes given JWT without verifying.
  *

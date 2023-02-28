@@ -21,16 +21,16 @@ const PRESETS: Record<PresetName, Omit<ModuleOptions, "preset">> = {
 const roleRegExp = /^\w+$/;
 
 export interface ModuleOptions {
-  /** Options preset. */
+  /** Options preset. Apply multiple options for a specific framework. */
   preset?: PresetName;
 
-  /** Default database role to use for unauthenticated users. */
+  /** Default database role to use for unauthenticated users. Set by `SET ROLE`. */
   defaultRole?: string;
 
   /** H3 event context attribute to get JWT token. WARNING: The token should be validated previously. This module does not validate JWT token. */
   contextTokenAttribute?: string;
 
-  /** JWT attribute to get database role from.   */
+  /** JWT attribute to get database role from. */
   jwtRoleAttribute?: string;
 
   /** Database config name to assign contents of the JWT token. All decoded data is assigned to this config as a stringified JSON. */
