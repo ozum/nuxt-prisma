@@ -52,11 +52,21 @@ export default eventHandler(async (event) => {
 
 ## Options
 
+Below is an example for Supabase.
+
+```ts
+export default defineNuxtConfig({
+  modules: ['nuxt-prisma'],
+  prisma: { preset: "supabase" } // Options preset. Apply multiple options for a specific framework.
+});
+```
+
+Supabase preset sets options as below.
+
 ```ts
 export default defineNuxtConfig({
   modules: ['nuxt-prisma'],
   prisma: {
-    preset: "",                         // Options preset. Apply multiple options for a specific framework.
     defaultRole: "anon",                // Default database role to use for unauthenticated users. Set by `SET ROLE`.
     contextTokenAttribute: "_token",    // H3 event context attribute to get JWT token. WARNING: The token should be validated previously. This module does not validate JWT token.
     jwtRoleAttribute: "role",           // JWT attribute to get database role from.
@@ -77,8 +87,6 @@ Example above adds a Nuxt server middleware as explained below.
 **IMPORTANT NOTES:**
 
 You should add a validated JWT to the context previously. JWT is not validated by this module. Storing a non-validated JWT in the context is unsecure.
-  
-
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-prisma/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
