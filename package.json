@@ -1,8 +1,13 @@
 {
   "name": "nuxt-prisma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Prisma support for Nuxt.",
-  "keywords": ["vue", "nuxt", "module", "prisma"],
+  "keywords": [
+    "vue",
+    "nuxt",
+    "module",
+    "prisma"
+  ],
   "author": {
     "name": "Özüm Eldoğan",
     "email": "ozum@ozum.net",
