@@ -40,6 +40,15 @@ export default defineNuxtConfig({
 });
 ```
 
+3. If `options.dbConfigName` or `options.jwtRoleAttribute` is used, you need to enable prisma client extensions. To use Prisma Client extensions, you must enable the clientExtensions preview feature flag in the generator block of your schema.prisma file. [Learn more](https://www.prisma.io/docs/concepts/components/prisma-client/client-extensions)
+
+```js
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["clientExtensions"]
+}
+```
+
 ## Usage
 
 **/server/api/item.get.ts**
